@@ -1,0 +1,57 @@
+<form [formGroup]="contactForm" (submit)="onSubmit()">
+    <mat-form-field appearance="outline">
+        <mat-label>Salutation</mat-label>
+        <mat-select formControlName="salutation">
+            <mat-option value="two">Ms</mat-option>
+            <mat-option value="two">Mrs</mat-option>
+            <mat-option value="one">Mr</mat-option>
+            <mat-option value="one">No Salutation</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>First Name</mat-label>
+        <input formControlName="firstname" matInput />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Last Name</mat-label>
+        <input formControlName="lastname" matInput />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Message</mat-label>
+        <textarea formControlName="message" matInput></textarea>
+    </mat-form-field>
+
+    <div class="privacy-text">
+        <mat-checkbox color="primary" formControlName="privacy"> </mat-checkbox> I've read the <a href="#">Terms & Conditions</a> and accept them
+    </div>
+
+    <!-- custom button with specific animation -->
+    <div class="custom-button-wrapper">
+        <button class="custom-button" type="submit" [disabled]="!contactForm.valid || !contactForm.touched">
+            <span class="text">send infromation</span>
+            <div class="icon-container">
+                <div class="icon icon--left">
+                    <svg>
+                        <use xlink:href="#arrow-right"></use>
+                    </svg>
+                </div>
+                <div class="icon icon--right">
+                    <svg>
+                        <use xlink:href="#arrow-right"></use>
+                    </svg>
+                </div>
+            </div>
+        </button>
+    </div>
+</form>
+
+<!-- svg arrow -->
+
+<svg style="display: none;">
+    <symbol id="arrow-right" viewBox="0 0 20 10">
+        <path d="M14.84 0l-1.08 1.06 3.3 3.2H0v1.49h17.05l-3.3 3.2L14.84 10 20 5l-5.16-5z"></path>
+    </symbol>
+</svg>

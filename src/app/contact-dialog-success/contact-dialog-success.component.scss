@@ -1,0 +1,23 @@
+@import "../../vars.scss";
+
+.message-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    h2,
+    p {
+        color: $primary-color;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .image {
+        color: $primary-color;
+        text-align: center;
+        font-size: 80px;
+        width: 80px;
+        height:80px;
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,13 @@
+.image {
+    background-image: url("https://cdn.pixabay.com/photo/2018/01/20/14/26/skyscraper-3094696_960_720.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+mat-checkbox {
+	::ng-deep .mat-checkbox-inner-container {
+      width: 30px;
+      height: 30px;
+  	}
+}

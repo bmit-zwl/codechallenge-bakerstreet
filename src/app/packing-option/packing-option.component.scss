@@ -1,0 +1,43 @@
+@import "../../vars.scss";
+
+.card {
+    background: $primary-color;
+
+    .image {
+        background-image: url('/assets/img/gift.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .content {
+        h4 {
+            font-weight: normal;
+        }
+
+        b {
+            font-weight: bold;
+        }
+    }
+}
+
+.card,
+.card > * {
+    color: #fff;
+}
+
+:host ::ng-deep mat-form-field {
+    .mat-checkbox-layout {
+        background-color: #fff;
+        border-radius: 5px;
+    }
+}
+
+mat-checkbox {
+    ::ng-deep .mat-checkbox-inner-container {
+        width: 30px;
+        height: 30px;
+        background-color: white;
+        border-radius: 3px;
+    }
+}

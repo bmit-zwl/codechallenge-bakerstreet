@@ -1,0 +1,167 @@
+@import "../../vars.scss";
+
+form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 60%;
+	margin: 0 auto;
+}
+
+:host ::ng-deep mat-form-field {
+	.mat-form-field-outline {
+		background-color: #fff;
+		border-radius: 5px;
+	}
+	.mat-form-field-wrapper {
+		margin: 0;
+		padding-bottom: 10px;
+	}
+}
+
+.privacy-text {
+	margin-top: 40px;
+
+	mat-checkbox {
+		margin-right: 20px;
+	}
+}
+
+mat-checkbox {
+	::ng-deep .mat-checkbox-inner-container {
+		width: 30px;
+		height: 30px;
+	}
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	overflow: hidden;
+}
+
+.btn-container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: var(--bg);
+
+	&:nth-child(1) {
+		--btn-bg: #da0000;
+		--bg: #f22c3a;
+	}
+	&:nth-child(2) {
+		--btn-bg: #fac300;
+		--bg: #fc6100;
+	}
+}
+
+.custom-button {
+	font-family: Roboto, "Helvetica Neue", sans-serif;
+	text-transform: uppercase;
+
+	--width: 180px;
+	--height: 60px;
+	border: 0;
+	position: relative;
+	min-width: 250px;
+	min-height: 40px;
+	border-radius: 5px;
+	color: #fff;
+	background: lighten($color: $primary-color, $amount: 10);
+	cursor: pointer;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.text,
+	.icon-container {
+		position: relative;
+		z-index: 2;
+	}
+
+	.icon-container {
+		--icon-size: 25px;
+		position: relative;
+		width: var(--icon-size);
+		height: var(--icon-size);
+		margin-left: 15px;
+		transition: transform 500ms ease;
+
+		.icon {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: var(--icon-size);
+			height: var(--icon-size);
+			transition: transform 500ms ease, opacity 250ms ease;
+
+			&--left {
+				transform: translateX(-200%);
+				opacity: 0;
+			}
+
+			svg {
+				width: 100%;
+				height: 100%;
+				fill: #fff;
+			}
+		}
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: $primary-color;
+		border-radius: 5px;
+		z-index: 1;
+		transition: transform 500ms ease;
+	}
+
+	&:hover:enabled {
+		&::after {
+			transform: translateX(65%);
+		}
+
+		.icon-container {
+			transform: translateX(125%);
+			.icon {
+				&--left {
+					transform: translateX(0);
+					opacity: 1;
+				}
+				&--right {
+					transform: translateX(200%);
+					opacity: 0;
+				}
+			}
+		}
+	}
+}
+
+.custom-button:disabled {
+	&::after {
+		background: #333;
+	}
+}
+
+.custom-button-wrapper {
+	width: 100%;
+	margin-top: 40px;
+	display: flex;
+	justify-content: center;
+}
