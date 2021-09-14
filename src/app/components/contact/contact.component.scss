@@ -1,4 +1,4 @@
-@import "../../vars.scss";
+@import "../../../vars.scss";
 
 form {
 	display: flex;
@@ -155,7 +155,7 @@ body {
 
 .custom-button:disabled {
 	&::after {
-		background: #333;
+		background: lighten($color: $primary-color, $amount: 30);
 	}
 }
 

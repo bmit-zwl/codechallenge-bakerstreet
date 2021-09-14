@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { ContactDialogSuccessComponent } from '../contact-dialog-success/contact-dialog-success.component';
+import { ContactDialogSuccessComponent } from '../../components/contact-dialog-success/contact-dialog-success.component';
 
 @Component({
   selector: 'app-landingpage',

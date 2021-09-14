@@ -12,14 +12,15 @@ import {MatIconModule} from '@angular/material/icon';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { LandingpageComponent } from './landingpage/landingpage.component';
-import { ProductsComponent } from './products/products.component';
-import { ProductComponent } from './product/product.component';
-import { PackingOptionComponent } from './packing-option/packing-option.component';
+import { LandingpageComponent } from './pages/landingpage/landingpage.component';
+import { ProductsComponent } from './components/products/products.component';
+import { ProductComponent } from './components/product/product.component';
+import { PackingOptionComponent } from './components/packing-option/packing-option.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { ContactComponent } from './contact/contact.component';
+import { ContactComponent } from './components/contact/contact.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ContactDialogSuccessComponent } from './contact-dialog-success/contact-dialog-success.component';
+import { ContactDialogSuccessComponent } from './components/contact-dialog-success/contact-dialog-success.component';
+import { TosComponent } from './pages/tos/tos.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ContactDialogSuccessComponent } from './contact-dialog-success/contact-
     ProductComponent,
     PackingOptionComponent,
     ContactComponent,
-    ContactDialogSuccessComponent
+    ContactDialogSuccessComponent,
+    TosComponent
   ],
   imports: [
     BrowserModule,
